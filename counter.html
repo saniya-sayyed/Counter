@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clickable Counter</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #counter {
+        font-size: 80px;
+        margin: 20px auto;
+        cursor: pointer;
+        padding: 20px;
+        width: 150px; /* Set width */
+        height: 150px; /* Set height */
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        transition: background-color 0.3s;
+		 text-align: center; /* Align text in the center */
+        line-height: 150px; /* Vertically center text */
+    }
+    #counter:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+    <h1>Clickable Counter</h1>
+    <div id="counter">0</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const counterDisplay = document.getElementById('counter');
+
+            let counterValue = 0;
+
+            function updateCounterDisplay() {
+                counterDisplay.textContent = counterValue;
+            }
+
+            // Increment counter when clicked
+            counterDisplay.addEventListener('click', function () {
+                counterValue++;
+                updateCounterDisplay();
+            });
+        });
+    </script>
+</body>
+</html>
